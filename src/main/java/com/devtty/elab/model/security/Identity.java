@@ -1,14 +1,21 @@
 package com.devtty.elab.model.security;
 
 
-import javax.persistence.Entity;
 import java.io.Serializable;
-import javax.persistence.Id;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Column;
+import javax.persistence.Id;
 import javax.persistence.Version;
-import java.lang.Override;@Entity public class Identity implements java.io.Serializable {
+
+import org.jboss.seam.security.annotations.management.EntityType;
+import org.jboss.seam.security.annotations.management.IdentityEntity;
+
+@Entity
+@IdentityEntity(EntityType.IDENTITY_OBJECT)
+public class Identity implements Serializable {
 
 	@Id
 	private @GeneratedValue(strategy = GenerationType.AUTO)
