@@ -9,6 +9,7 @@
   <properties>
     <seam.persistence.version>3.1.0.Final</seam.persistence.version>
     <seam.security.version>3.1.0.Final</seam.security.version>
+    <drools.planner.version>5.3.1.Final</drools.planner.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -78,6 +79,11 @@
       <groupId>org.jboss.seam.security</groupId>
       <artifactId>seam-security</artifactId>
       <version>${seam.security.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.drools.planner</groupId>
+      <artifactId>drools-planner-core</artifactId>
+      <version>${drools.planner.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
