@@ -1,5 +1,9 @@
 package com.devtty.elab.model.planner.contract;
 
+import javax.persistence.Entity;
+import javax.persistence.Transient;
+
+@Entity
 public class MinMaxContractLine extends ContractLine{
 
 	private boolean minimumEnabled;
@@ -9,6 +13,7 @@ public class MinMaxContractLine extends ContractLine{
 	private boolean maximumEnabled;
 	private int maximumValue;
 	private int maximumWeight;
+	
 	public boolean isMinimumEnabled() {
 		return minimumEnabled;
 	}
@@ -46,6 +51,7 @@ public class MinMaxContractLine extends ContractLine{
 		this.maximumWeight = maximumWeight;
 	}
 	
+	@Transient
 	public boolean isEnabled(){
 		return minimumEnabled || maximumEnabled;
 	}

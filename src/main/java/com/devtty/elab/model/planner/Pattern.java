@@ -1,7 +1,8 @@
 package com.devtty.elab.model.planner;
 
-import com.devtty.elab.model.common.AbstractPersistable;
+import javax.persistence.Entity;
 
+import com.devtty.elab.model.common.AbstractPersistable;
 
 public abstract class Pattern extends AbstractPersistable{
 	

@@ -3,6 +3,7 @@ package com.devtty.elab.model.planner.contract;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
 import com.devtty.elab.model.common.AbstractPersistable;
@@ -41,7 +42,7 @@ public class Contract extends AbstractPersistable{
 		this.weekendDefinition = weekendDefinition;
 	}
 
-	@Transient
+	@OneToMany(mappedBy="contract")
 	public List<ContractLine> getContractLineList() {
 		return contractLineList;
 	}

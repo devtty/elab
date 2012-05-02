@@ -1,11 +1,15 @@
 package com.devtty.elab.model.planner.contract;
 
+import javax.persistence.Entity;
+
 import com.devtty.elab.model.planner.Pattern;
+
 
 public class PatternContractLine extends ContractLine{
 	
 	private Contract contract;
 	private Pattern pattern;
+	
 	public Contract getContract() {
 		return contract;
 	}
