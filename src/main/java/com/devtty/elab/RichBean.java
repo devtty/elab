@@ -1,11 +1,12 @@
-package ca.bleathem.richfaces;
+package com.devtty.elab;
 
 import java.io.Serializable;
-import javax.faces.bean.ManagedBean;
+
 import javax.faces.bean.ViewScoped;
+import javax.inject.Named;
 
 @ViewScoped
-@ManagedBean(name="richBean")
+@Named("richBean")
 public class RichBean implements Serializable {
 
     private static final long serialVersionUID = -2403138958014741653L;
