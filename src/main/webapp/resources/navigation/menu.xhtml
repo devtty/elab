@@ -16,12 +16,12 @@
         <rich:dropDownMenu mode="ajax">
           <f:facet name="label">
             <h:panelGroup>
-              <h:outputText value="Mitarbeiter"/>
+              <h:outputText value="#{i18n['menu.overview.main']}"/>
             </h:panelGroup>
           </f:facet>
-          <rich:menuItem label="Overview" />
-          <rich:menuItem label="Close"/>
-          <rich:menuItem label="Exit"/>
+          <rich:menuItem label="#{i18n['menu.overview.employee']}" action="employee" />
+          <rich:menuItem label="#{i18n['menu.overview.project']}"/>
+          <rich:menuItem label="#{i18n['menu.overview.schedule']}"/>
         </rich:dropDownMenu>
         <rich:dropDownMenu mode="ajax">
           <f:facet name="label">

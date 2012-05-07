@@ -18,6 +18,11 @@ xmlns:form="http://java.sun.com/jsf/composite/form">
     <ui:define name="body">
       <rich:panel header="Employees">
         <table:employees/>
+        <a4j:outputPanel id="buttonsblock" layout="block">
+          <h:commandButton value="#{i18n['button.new']}"/>
+          <h:commandButton value="#{i18n['button.edit']}"  disabled="#{employeeTableSelectionBean.selectedEmployees.size!=1}"/>
+          <h:commandButton value="#{i18n['button.delete']}" disabled="#{employeeTableSelectionBean.selectedEmployees.size==0}"/>
+        </a4j:outputPanel>
       </rich:panel>
       <rich:panel>
       <form:contract/>

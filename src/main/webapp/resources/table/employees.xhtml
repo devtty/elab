@@ -13,15 +13,21 @@
   <composite:implementation>
  
     <h:form>
-      <rich:dataTable var="emp" value="#{allEmployees}">
-        <rich:column><h:outputText value="#{emp.name}"/></rich:column>
-        <rich:column><h:outputText value="#{emp.contract.description}"/></rich:column>
+      <rich:extendedDataTable var="emp" value="#{employeeTableSelectionBean.allEmployees}" selection="#{employeeTableSelectionBean.selection}" frozenColumns="2">
+        <a4j:ajax execute="@form" event="selectionchange" listener="#{employeeTableSelectionBean.selectionListener}" render="buttonsblock"/>
+        <rich:column sortBy="#{emp.name}">
+          <f:facet name="header">#{i18n['employee.name']}</f:facet>
+          <h:outputText value="#{emp.name}"/></rich:column>
+        <rich:column>
+          <f:facet name="header">#{i18n['employee.contract']}</f:facet>
+          <h:outputText value="#{emp.contract.description}"/>
+        </rich:column>
         <rich:column>
           <a4j:repeat var="sd" value="#{emp.contract.contractLineList}">
             #{sd.contractLineType}
           </a4j:repeat>
         </rich:column>
-      </rich:dataTable>
+      </rich:extendedDataTable>
     </h:form>
   </composite:implementation>
 
