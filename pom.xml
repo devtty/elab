@@ -7,10 +7,10 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
   <properties>
-    <seam.persistence.version>3.1.0.Final</seam.persistence.version>
-    <seam.security.version>3.1.0.Final</seam.security.version>
     <seam.faces.version>3.1.0.Final</seam.faces.version>
+    <seam.security.version>3.1.0.Final</seam.security.version>
     <drools.planner.version>5.3.1.Final</drools.planner.version>
+    <seam.persistence.version>3.1.0.Final</seam.persistence.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -95,6 +95,11 @@
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
   <repositories>

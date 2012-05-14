@@ -22,6 +22,7 @@
           <rich:menuItem label="#{i18n['menu.overview.employee']}" action="employee" />
           <rich:menuItem label="#{i18n['menu.overview.project']}"/>
           <rich:menuItem label="#{i18n['menu.overview.schedule']}"/>
+          <rich:menuItem label="logout" action="#{identity.logout}" />
         </rich:dropDownMenu>
         <rich:dropDownMenu mode="ajax">
           <f:facet name="label">
@@ -31,6 +32,7 @@
           </f:facet>
           <rich:menuItem label="Solver"/>
         </rich:dropDownMenu>
+        #{identity.user.id}
         <h:inputText/>
       </rich:toolbar>
     </h:form>
