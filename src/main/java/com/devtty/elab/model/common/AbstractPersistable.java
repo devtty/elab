@@ -3,6 +3,7 @@ package com.devtty.elab.model.common;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
+/* empty */
 @MappedSuperclass
 public abstract class AbstractPersistable{
 	
