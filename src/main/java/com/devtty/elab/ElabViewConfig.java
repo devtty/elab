@@ -10,6 +10,7 @@ import org.jboss.seam.security.annotations.LoggedIn;
 @ViewConfig
 public interface ElabViewConfig {
 	
+	
 	static enum Views {
 		@LoggedIn
 		@UrlMapping(pattern="/")
