@@ -35,6 +35,7 @@ public class SkillProficiency extends AbstractPersistable{
 				+ "]";
 	}
 	
+
 	
 
 }
