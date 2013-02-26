@@ -1,6 +1,7 @@
 package com.devtty.elab.model.planner;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.NotNull;
 
 import com.devtty.elab.model.common.AbstractPersistable;
 
@@ -8,7 +9,7 @@ import com.devtty.elab.model.common.AbstractPersistable;
 public class ShiftType extends AbstractPersistable{
 
 	private String code;
-	private int index;
+	private int idx;
 	private String startTimeString;
 	private String endTimeString;
 	private boolean night;
@@ -20,11 +21,11 @@ public class ShiftType extends AbstractPersistable{
 	public void setCode(String code) {
 		this.code = code;
 	}
-	public int getIndex() {
-		return index;
+	public int getIdx() {
+		return idx;
 	}
-	public void setIndex(int index) {
-		this.index = index;
+	public void setIdx(int idx) {
+		this.idx = idx;
 	}
 	public String getStartTimeString() {
 		return startTimeString;
@@ -38,6 +39,9 @@ public class ShiftType extends AbstractPersistable{
 	public void setEndTimeString(String endTimeString) {
 		this.endTimeString = endTimeString;
 	}
+	
+	@org.hibernate.annotations.Type(type="true_false")
+	@NotNull
 	public boolean isNight() {
 		return night;
 	}

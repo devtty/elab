@@ -3,6 +3,8 @@ package com.devtty.elab.model.planner.contract;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
@@ -34,6 +36,7 @@ public class Contract extends AbstractPersistable{
 		this.description = description;
 	}
 
+	@Enumerated(EnumType.STRING)
 	public WeekendDefinition getWeekendDefinition() {
 		return weekendDefinition;
 	}

@@ -11,7 +11,7 @@ public class Shift extends AbstractPersistable{
 
 	private ShiftDate shiftDate;
 	private ShiftType shiftType;
-	private int index;
+	private int idx;
 	
 	private int requiredEmployeeSize;
 
@@ -33,12 +33,12 @@ public class Shift extends AbstractPersistable{
 		this.shiftType = shiftType;
 	}
 
-	public int getIndex() {
-		return index;
+	public int getIdx() {
+		return idx;
 	}
 
-	public void setIndex(int index) {
-		this.index = index;
+	public void setIdx(int idx) {
+		this.idx = idx;
 	}
 
 	public int getRequiredEmployeeSize() {

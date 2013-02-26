@@ -1,20 +1,28 @@
 package com.devtty.elab.model.planner.request;
 
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+
 import com.devtty.elab.model.common.AbstractPersistable;
 import com.devtty.elab.model.planner.Employee;
 import com.devtty.elab.model.planner.Shift;
+import javax.persistence.OneToOne;
 
+@Entity
 public class ShiftOffRequest extends AbstractPersistable{
 	
 	private Employee employee;
 	private Shift shift;
 	private int weight;
+	
+	@ManyToOne
 	public Employee getEmployee() {
 		return employee;
 	}
 	public void setEmployee(Employee employee) {
 		this.employee = employee;
 	}
+	@OneToOne(optional = false)
 	public Shift getShift() {
 		return shift;
 	}

@@ -8,10 +8,13 @@ import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 
 import com.devtty.elab.model.common.AbstractPersistable;
+import javax.persistence.DiscriminatorColumn;
+import static javax.persistence.DiscriminatorType.STRING;
 
 @Entity
-@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
-public class ContractLine extends AbstractPersistable{
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(discriminatorType = STRING)
+public abstract class ContractLine extends AbstractPersistable{
 
 	private Contract contract;
 	private ContractLineType contractLineType;

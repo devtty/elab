@@ -1,5 +1,8 @@
 package com.devtty.elab.model.planner;
 
+import javax.persistence.Entity;
+
+@Entity
 public class FreeBefore2DaysWithAWorkDayPattern extends Pattern{
 	
 	private DayOfWeek freeDayOfWeek;
