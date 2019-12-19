@@ -11,7 +11,7 @@
     <jboss.as.plugin.version>7.3.Final</jboss.as.plugin.version>
     <seam.faces.version>3.1.0.Final</seam.faces.version>
     <seam.security.version>3.1.0.Final</seam.security.version>
-    <drools.planner.version>5.3.1.Final</drools.planner.version>
+    <drools.planner.version>5.6.0.Final</drools.planner.version>
     <seam.persistence.version>3.1.0.Final</seam.persistence.version>
   </properties>
   
